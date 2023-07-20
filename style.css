@@ -1,10 +1,58 @@
 *{margin: 0; padding: 0; box-sizing: border-box;}
 
 :root{
-    --primary-color: hsl(257, 40%, 49%);
+    --primary-color: rgb(103, 75, 175);
     --secondary-color: hsl(300, 69%, 71%);
     --heading-font: 'Poppins';
-    --body-font: Work-Sans;
+    --body-font: 'Work Sans';
 }
 
-body{font-family:var(--body-font) ;}
+body{font-family: var(--body-font); min-height: 100vh; background: url(images/bg-desktop.svg),
+    linear-gradient(rgba(103, 75, 175, 1) 80%, rgba(103, 75, 175, 1) 100%);
+    ; background-size: contain; background-repeat: no-repeat;
+    padding: 30px 60px; color: white;}
+
+    header{margin-bottom: 50px;}
+        header img{width: 15%;}
+
+
+    main{display: flex; justify-content: space-between; align-items: center;
+        gap: 20px;}
+
+        main img{width: 50%;}
+
+        .text{width: 38.5%; line-height: 25px;
+            font-size: 1rem; margin-bottom: 0px;}
+
+        h2{font-family: var(--heading-font); font-weight: 600;
+            font-size: 2.5rem; margin-bottom: 10px; line-height: 40px;}
+
+        button{padding: 10px 45px; border-radius: 20px; margin-top: 15px; border-style: none;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 10px; color: var(--primary-color);}
+            button:hover{background-color: var(--secondary-color); color: white; cursor: pointer;}
+
+    
+    footer{margin-top: 10px;}          
+        footer .fab{color: white;}    
+        footer .icons i{border: 1.5px solid white; border-radius: 50%; padding: 10px 12px;}
+        .icons{display: flex; justify-content: flex-end; gap: 15px;}
+        .fab:hover{color: var(--secondary-color); cursor: pointer; border: var(--secondary-color) 1.5px solid;}
+
+        .attribution{margin-top: 100px; text-align: center;}
+        .attribution a{text-decoration: none; color: white;}
+
+
+@media screen and (max-width:576px) {
+    body{padding: 20px 50px;
+        background: url(images/bg-mobile.svg) linear-gradient(rgba(103, 75, 175, 1) 80%, rgba(103, 75, 175, 1) 100%);
+        background-size: contain; background-position: top;}
+    main{flex-direction: column;}
+    .text{width: 100%; text-align: center; font-size: 1rem;
+        margin-top: 20px;}
+    button{width: 80%; margin-top: 40px;}
+    main img{width: 100%;}
+    header img{width: 50%;}
+    .icons{justify-content: center; margin-top: 70px;}
+    .attribution{font-size: 0.5rem;}
+    
+}
